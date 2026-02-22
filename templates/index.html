@@ -10,15 +10,12 @@
             text-align: center;
         }
 
-        .navbar {
-            background-color: white;
-            padding: 15px;
-            font-weight: bold;
-            font-size: 20px;
+        .logo {
+            padding: 20px;
         }
 
         .hero {
-            margin-top: 100px;
+            margin-top: 50px;
         }
 
         h1 {
@@ -43,13 +40,15 @@
 
         .btn:hover {
             background-color: #ff10aa;
+            color: white;
         }
     </style>
 </head>
 <body>
 
-    <div class="navbar">
-        Mimi's Mart 🛍
+    <!-- Logo Section -->
+    <div class="logo">
+        <img src="{{ url_for('static', filename='logo.png') }}" width="250">
     </div>
 
     <div class="hero">
