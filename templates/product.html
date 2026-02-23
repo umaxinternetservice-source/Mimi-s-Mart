@@ -2,15 +2,80 @@
 <html>
 <head>
     <title>Products - Mimi's Mart</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            text-align: center;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            background-color: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .brand {
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .nav-right a {
+            text-decoration: none;
+            margin-left: 20px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .nav-right a:hover {
+            color: #ff10aa;
+        }
+
+        .active {
+            border-bottom: 2px solid white;
+        }
+
+        h1 {
+            margin-top: 80px;
+            color: white;
+        }
+
+        img {
+            margin-top: 20px;
+            border-radius: 15px;
+        }
+    </style>
 </head>
-<body style="text-align:center; background:#ff9a9e; font-family:Arial;">
+<body>
+
+    <div class="navbar">
+        <div class="nav-left">
+            <img src="{{ url_for('static', filename='logo.png') }}" width="60">
+            <span class="brand">Mimi's Mart</span>
+        </div>
+
+        <div class="nav-right">
+            <a href="/">Home</a>
+            <a href="/product" class="active">Product</a>
+            <a href="#">Gallery</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
 
     <h1>Our Products</h1>
 
     <img src="{{ url_for('static', filename='product1.png') }}" width="250">
-
-    <br><br>
-    <a href="/">⬅ Back to Home</a>
 
 </body>
 </html>
